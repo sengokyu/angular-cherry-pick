@@ -1,6 +1,6 @@
 # What is this?
 
-This is equivalent as follows.
+This is nearly equivalent as follows.
 
 ```
 <ANY ng-repeat="option in options|filter:{id:selectedId}:true">{{option.title}}</ANY>
@@ -37,8 +37,22 @@ And, render a element as `title' property not `id' property.
 {{options|cherrypick:{id:selectedId}:'title'}}
 ```
 
+# Usage
 
-## Why does not bind a object, but a id.
+Add the module to your application.
+
+```js:
+angular.module('myApp', ['ngCherryPick']);
+```
+
+Add the filter to a binding.
+
+```html:
+{{mylist|cherrypick:{id:100}:properyName}}
+```
+
+
+# Why does not bind a object, but a id.
 
 Because the world is complex...
 
