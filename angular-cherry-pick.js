@@ -1,9 +1,9 @@
 /**
- * angular-cherrypick filter
+ * angularjs cherry pick filter
  */
 'use strict';
 
-(function(angular) {
+(function (angular) {
     function cherryPick(array, expression) {
         for (var i = 0; i < array.length; i++) {
             var item = array[i];
@@ -28,12 +28,12 @@
 
 
 
-    angular.module('ngCherryPick', []).filter('cherrypick', function() {
-        return function(array, expression, propertyKey) {
+    angular.module('ngCherryPick', []).filter('cherrypick', function () {
+        return function (array, expression, propertyKey) {
             var picked = cherryPick(array, expression);
 
             return picked ? picked[propertyKey] : undefined;
-        }
+        };
     });
 
 
